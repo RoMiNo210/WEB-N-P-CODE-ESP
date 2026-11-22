@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d18"><title>NẠP CODE ESP</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="brand"><span class="chip">⌘</span><div><b>NẠP CODE ESP</b><small>DARK ESP · CODE LIBRARY</small></div></div><span class="status"><i></i> THƯ VIỆN OFFLINE · 100% CHẠY TRONG TRÌNH DUYỆT</span></header>
+<main>
+<section class="hero"><div class="eyebrow">ESP8266 · ESP32 · ESP32-SERIES</div><h1>CODE & FIRMWARE<br><em>TRONG MỘT NƠI.</em></h1><p>Tìm dự án, xem mã nguồn, chọn đúng dòng chip và chuẩn bị firmware.</p></section>
+<section class="panel">
+ <div class="section-head"><div><span class="eyebrow">01 / DISCOVER</span><h2>Thư viện mã nguồn</h2></div><span id="count" class="count"></span></div>
+ <input id="search" class="search" placeholder="⌕  Tìm code, chức năng, tên chip..." autocomplete="off">
+ <div class="filters"><select id="chip"><option value="">Tất cả dòng ESP</option></select><select id="category"><option value="">Tất cả danh mục</option></select><select id="sort"><option value="name">Sắp xếp: Tên A→Z</option><option value="category">Sắp xếp: Danh mục</option><option value="official">Sắp xếp: Chính thức trước</option></select></div>
+ <div id="catalog" class="catalog"></div>
+</section>
+<section class="panel">
+ <div class="section-head"><div><span class="eyebrow">02 / YOUR INPUT</span><h2>Dán code hoặc chọn firmware</h2></div></div>
+ <div class="tabs"><button class="tab active" data-tab="code">DÁN MÃ NGUỒN</button><button class="tab" data-tab="firmware">TẢI FILE .BIN</button></div>
+ <div id="codePane"><textarea id="code" spellcheck="false" placeholder="// Dán code Arduino/C++ hoặc nội dung cấu hình tại đây..."></textarea><div class="row"><select id="target"><option>Chọn loại chip</option><option>ESP8266</option><option>ESP32</option><option>ESP32-S2</option><option>ESP32-S3</option><option>ESP32-C3</option><option>ESP32-C6</option></select><button id="copy" class="btn secondary">SAO CHÉP CODE</button></div><p class="hint">Code nguồn cần được biên dịch thành firmware tương thích trước khi nạp. Trang này chưa biên dịch hoặc ghi flash.</p></div>
+ <div id="firmwarePane" hidden><label class="drop" for="bin"><span>⇧</span><b>Chọn firmware .bin</b><small>File chỉ được đọc cục bộ để kiểm tra tên và dung lượng.</small><input id="bin" type="file" accept=".bin,application/octet-stream"></label><div id="fileInfo" class="fileinfo">Chưa chọn file.</div><p class="hint">Chỉ sử dụng firmware từ nguồn tin cậy và đúng model/flash layout.</p></div>
+</section>
+<section class="panel">
+ <div class="section-head"><div><span class="eyebrow">03 / HARDWARE</span><h2>Kết nối thiết bị</h2></div><span class="pill">USB / OTG</span></div>
+ <p class="hint">Trang thư viện này không tự nạp firmware. Trình duyệt Android có thể không hỗ trợ USB-Serial trên một số điện thoại hoặc adapter.</p>
+ <button id="usb" class="btn primary">KIỂM TRA HỖ TRỢ USB</button><div id="usbInfo" class="fileinfo">Chưa kiểm tra.</div>
+</section>
+<footer>© NẠP CODE ESP · Chọn đúng chip, firmware và giấy phép trước khi sử dụng.</footer>
+</main><script src="app.js"></script>
+</body></html>
